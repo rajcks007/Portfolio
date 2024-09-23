@@ -60,8 +60,12 @@ nav ul li a {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1 ,h2 {
     color: #333;
+}
+
+h3 {
+    color: #4e4e4ec4;
 }
 
 p, li {
@@ -75,17 +79,16 @@ p, li {
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
     color: #333;
-    padding: 10px 20px;
+    padding: 60px 500px;
     text-align: center;
 }
 
-.btn {
+.home .btn {
     padding: 10px 30px;
     background-color: none;
-    color: #fff;
+    color: #000000;
     border: 2px solid #000000; /* Transparent border for a shadow effect */
     border-radius: 25px; /* Fully rounded corners */
-    margin-top: 20px;
     text-decoration: none;
     transition: all 0.3s; /* Smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
@@ -98,7 +101,8 @@ p, li {
 }
 
 .home .social-icons {
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .social-icons a {
@@ -117,35 +121,40 @@ p, li {
 
 /* About Section */
 .about {
-    padding: 50px 20px;
+    padding: 50px 50px;
     background-color: #333;
     color: white;
     text-align: center;
+    margin-bottom: 0%;
 }
 
 .profile-img {
     border-radius: 50%;
     width: 160px;
     height: 175px;
+    margin-top: -60px;
     margin-bottom: 20px;
 }
 
 .about {
-    padding: 50px 20px;
+    padding: 50px 300px;
 }
 
+.about p1{
+    text-align: justify; /* Justifies the text */  
+}
 .about p {
     text-align: justify; /* Justifies the text */
+    margin-bottom: 50px;
 }
 
 .about .btn {
-    margin-top: 20px;
     padding: 10px 30px;
     background-color: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .about .btn:hover {
@@ -157,15 +166,35 @@ p, li {
 .strengths {
     background-color: #f4f4f4;
     padding: 50px 20px;
+    margin-bottom: 5%;
 }
 
 /* Education Section */
+.education {
+    margin-bottom: 5%;
+}
 .education-title {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+/* Experience Section */
+.experience {
+    margin-bottom: 5%;
+}
+
+.Experience-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/*************************************************************************/
+
 
 .divider {
     display: flex;
@@ -196,7 +225,7 @@ p, li {
 }
 
 .container.left {
-    right: 8%;
+    right: 5%;
 }
 
 .container.right {
@@ -227,9 +256,10 @@ p, li {
     width: 1px;
     background-color: #6b5b95;
     top: 0;
-    bottom: -55%;
+    bottom: 0%;
     left: 50%;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 1%;
 }
 
 /* Circle points */
@@ -242,17 +272,17 @@ p, li {
     background-color: #6b5b95;
     top: 15px;
     left: 50%;
-    margin-left: -8px;
+    margin-left: -10px;
 }
 
 /* Left container alignment */
 .container.left::before {
-    left: -8px;
+    left: 662px;
 }
 
 /* Right container alignment */
 .container.right::before {
-    left: calc(100% - 8px);
+    left: calc(100% - 653px);
 }
 
 /* Left-aligned content styling */
@@ -267,12 +297,6 @@ p, li {
     text-align: left;
     padding-left: 20px;
     padding-right: 0;
-}
-
-/* Experience Section */
-.experience {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
 }
 
 /* Footer Section */
