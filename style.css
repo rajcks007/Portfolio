@@ -163,10 +163,46 @@ p, li {
 }
 
 /* Strengths Section */
+
+.strengths-title{
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 .strengths {
     background-color: #f4f4f4;
     padding: 50px 20px;
     margin-bottom: 5%;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #6b5b95; /* Customize icon color */
 }
 
 /* Education Section */
