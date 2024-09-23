@@ -30,7 +30,7 @@
 let canvas = document.getElementById('dotsCanvas');
 const ctx = canvas.getContext('2d');
 const dots = [];
-const totalDots = 200; // Increased number of dots
+const totalDots = 500; // Increased number of dots
 const blinkInterval = 2000; // Blink interval in milliseconds
 
 const resizeCanvas = () => {
