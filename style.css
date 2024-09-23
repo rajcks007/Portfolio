@@ -1,0 +1,316 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*header*/
+header {
+    background: #333; 
+    color: white; 
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Home Section */
+.home {
+    background: linear-gradient(270deg, #ff6b6b, #f7b733, #ff6b6b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: none;
+    color: #fff;
+    border: 2px solid #000000; /* Transparent border for a shadow effect */
+    border-radius: 25px; /* Fully rounded corners */
+    margin-top: 20px;
+    text-decoration: none;
+    transition: all 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.btn:hover {
+    background-color: #aaaaaa9c; /* Change background on hover */
+    color: #000000;
+    border: 2px solid #000000; /* Add border color on hover */
+}
+
+.home .social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons i {
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #3434343b; /* Change color on hover */
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 160px;
+    height: 175px;
+    margin-bottom: 20px;
+}
+
+.about {
+    padding: 50px 20px;
+}
+
+.about p {
+    text-align: justify; /* Justifies the text */
+}
+
+.about .btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about .btn:hover {
+    background-color: #ffffff; /* Change background on hover */
+    color: #333; /* Change text color on hover */
+}
+
+/* Strengths Section */
+.strengths {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+/* Education Section */
+.education-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.diamond { 
+    width: 10px;
+    height: 10px;
+    background-color: #6b5b95;
+    transform: rotate(45deg);
+    margin: 0 5px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 5px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container.left {
+    right: 8%;
+}
+
+.container.right {
+    left: 48%;
+}
+
+.content {
+    padding: 10px;
+    background-color: #88888837;
+    position: relative;
+    border-radius: 6px;
+}
+
+.date {
+    background-color: #6b5b95;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Create the vertical timeline line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: #6b5b95;
+    top: 0;
+    bottom: -55%;
+    left: 50%;
+    margin-left: 0px;
+}
+
+/* Circle points */
+.container::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #6b5b95;
+    top: 15px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+/* Left container alignment */
+.container.left::before {
+    left: -8px;
+}
+
+/* Right container alignment */
+.container.right::before {
+    left: calc(100% - 8px);
+}
+
+/* Left-aligned content styling */
+.container.left .content {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+/* Right-aligned content styling */
+.container.right .content {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+/* Experience Section */
+.experience {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer form input, footer form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+footer form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+}
