@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+ 
 }
 
 @keyframes gradientAnimation {
@@ -57,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #b17457;
+  color: #6b5b95;
 }
 
 nav ul li a::after {
@@ -65,7 +66,7 @@ nav ul li a::after {
   width: 0px;
   height: 2px;
   display: block;
-  background: #b17457;
+  background: #6b5b95;
   transition: 300ms;
 }
 
@@ -85,10 +86,13 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
-h1,
-h2 {
-  color: #333;
+h1{
+    color: #ffffff;
 }
+
+h2{
+    color: #424242;
+} 
 
 h3 {
   color: #4e4e4ec4;
@@ -102,12 +106,33 @@ li {
 
 /* Home Section */
 .home {
-  background: linear-gradient(270deg, #ff6b6b, #f7b733, #ff6b6b);
-  background-size: 300% 300%;
-  animation: gradientAnimation 10s ease infinite;
-  color: #333;
-  padding: 6rem 2rem 2rem;
-  text-align: center;
+    background-image: 
+    /* repeating-linear-gradient(
+        to right, 
+        #2d2a44 0px, 
+        #2d2a44 1px, 
+        transparent 2px, 
+        transparent 200px
+    ), */
+    /* repeating-linear-gradient(
+        to bottom, 
+        #2d2a44 0px, 
+        #2d2a44 1px, 
+        transparent 2px, 
+        transparent 200px
+    ), */
+    radial-gradient(
+        circle at 50% 50%, 
+        #6b5b95, 
+        #1a1741
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #ffffff;
+    padding: 6rem 2rem 2rem;
+    text-align: center;
+    position: relative; /* Add this */
+    overflow: hidden; /* Add this to hide overflow */
 }
 
 .pera1 {
@@ -132,11 +157,6 @@ li {
   border: 2px solid #000000; /* Add border color on hover */
 }
 
-/* .home .social-icons {
-  margin-top: 50px;
-  margin-bottom: 50px;
-} */
-
 .home .social-icons {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -152,9 +172,44 @@ li {
   transition: color 0.3s ease;
 }
 
-.social-icons i:hover {
-  color: #3434343b; /* Change color on hover */
+/* WhatsApp icon hover */
+.social-icons a:nth-child(1):hover {
+    color: #04ff00; /* WhatsApp green */
 }
+
+/* Email icon hover */
+.social-icons a:nth-child(2):hover {
+    color: #ff1500; /* Gmail red */
+}
+
+/* LinkedIn icon hover */
+.social-icons a:nth-child(3):hover {
+    color: #0037ff; /* LinkedIn blue */
+}
+
+/* Xing icon hover */
+.social-icons a:nth-child(4):hover {
+    color: #007086; /* Xing green */
+}
+
+
+#dotsCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind other content */
+}
+
+.home > * {
+  position: relative; /* Ensure content is above the canvas */
+  z-index: 1;
+}
+
+
+/****************************************************************************/
+
 
 /* About Section */
 .about {
