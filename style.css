@@ -216,7 +216,7 @@ nav ul {
 
   .home {
     padding: 4rem 1rem 2rem;
-    height: 470px;
+    height: 510px;
   }
 
   .home .pera1 {
@@ -382,7 +382,6 @@ nav ul {
 /* Experience Section */
 .experience {
   padding: 70px 20px;
-  margin-top: -10%;
 }
 
 .Experience-title {
@@ -395,6 +394,7 @@ nav ul {
 @media (max-width: 768px) {
   .experience {
     padding: 50px 10px 0px 30px;
+    margin-top: -10%;
   }
 }
 
@@ -408,8 +408,6 @@ nav ul {
 /* Experience Section */
 .education {
   padding: 70px 20px;
-  margin-top: 8%;
-  margin-bottom: 15%;
 }
 
 @media (max-width: 768px) {
