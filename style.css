@@ -372,7 +372,7 @@ li {
   color: #6b5b95; /* Customize icon color */
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .strengths {
     padding: 40px 10px;
     font-size: 2vm;
