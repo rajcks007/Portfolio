@@ -310,24 +310,6 @@ li {
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .strengths {
-    padding: 40px 10px;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 10px;
-  }
-  
-
-}
-
 .card:hover {
   transform: translateY(-5px);
 }
@@ -337,6 +319,19 @@ li {
   margin-bottom: 15px;
   color: #6b5b95; /* Customize icon color */
 }
+
+/* @media (max-width: 768px) {
+  .strengths {
+    padding: 40px 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+} */
 
 /* Experience Section */
 .experience {
