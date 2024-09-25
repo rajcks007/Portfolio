@@ -64,6 +64,11 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Logo aligned to the left */
+nav .logo {
+  order: 0; /* Make sure the logo stays on the left */
+}
+
 .logo a {
   font-size: 1.8rem;
   font-weight: bold;
@@ -94,6 +99,25 @@ p,
 li {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  order: 3;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
 }
 
 /* Home Section */
@@ -190,6 +214,11 @@ li {
     align-items: center;
   }
 
+  /* When active, move nav links into view */
+  nav ul.active {
+    right: 0;
+  }
+
   .home {
     padding: 4rem 1rem 2rem;
   }
@@ -201,6 +230,29 @@ li {
   .home .btn {
     margin-top: 5rem;
   }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 60%;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: flex;
+  }
+  
 }
 
 @media (max-width: 576px) {
@@ -323,7 +375,7 @@ li {
 @media (max-width: 750px) {
   .strengths {
     padding: 40px 10px;
-    font-size: 3vm;
+    font-size: 2vm;
     letter-spacing: 1px;
   }
   

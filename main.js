@@ -33,6 +33,31 @@ const dots = [];
 const totalDots = 100; // Increased number of dots
 const blinkInterval = 2000; // Blink interval in milliseconds
 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav'); // Parent container for the menu
+
+  // Toggle the menu when the hamburger is clicked
+  hamburger.addEventListener('click', (event) => {
+    navLinks.classList.toggle('active');
+    event.stopPropagation(); // Stop event from bubbling up
+  });
+
+  // Close the menu if clicking anywhere outside of it
+  document.addEventListener('click', (event) => {
+    // Check if the clicked area is outside the nav menu
+    if (!nav.contains(event.target)) {
+      navLinks.classList.remove('active');
+    }
+  });
+
+  // Close the menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
 const resizeCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
