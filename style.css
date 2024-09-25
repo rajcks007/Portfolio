@@ -442,6 +442,7 @@ li {
 
 /* Title and description */
 .list-2 li .title,
+.list-2 li .title2,
 .list-2 li .descr {
   background: var(--bgColor);
   position: relative;
@@ -449,6 +450,11 @@ li {
 }
 .list-2 li .title {
   padding-block-start: 1.5rem;
+  padding-block-end: -5rem;
+  font-weight: 500;
+}
+.list-2 li .title2 {
+  padding-block-start: 0.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
