@@ -320,7 +320,7 @@ li {
   color: #6b5b95; /* Customize icon color */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
   .strengths {
     padding: 40px 10px;
     font-size: 12px;
