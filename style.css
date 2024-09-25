@@ -320,6 +320,12 @@ li {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
+  .card {
+    padding: 10px;
+  }
+  
+
 }
 
 .card:hover {
