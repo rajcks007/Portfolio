@@ -13,17 +13,6 @@ body {
  
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 /*header*/
 header {
   background: #333;
@@ -39,6 +28,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 2rem 0 2rem;
+  padding: 0.5rem 0;
 }
 
 nav ul {
@@ -88,10 +78,12 @@ nav ul li a:hover::after {
 
 h1{
     color: #ffffff;
+    margin-bottom: 3%;
 }
 
 h2{
     color: #424242;
+    margin-bottom: 3%;
 } 
 
 h3 {
@@ -106,27 +98,7 @@ li {
 
 /* Home Section */
 .home {
-    background-image: 
-    /* repeating-linear-gradient(
-        to right, 
-        #2d2a44 0px, 
-        #2d2a44 1px, 
-        transparent 2px, 
-        transparent 200px
-    ), */
-    /* repeating-linear-gradient(
-        to bottom, 
-        #2d2a44 0px, 
-        #2d2a44 1px, 
-        transparent 2px, 
-        transparent 200px
-    ), */
-    radial-gradient(
-        circle at 50% 50%, 
-        #6b5b95, 
-        #1a1741
-    );
-    background-size: 300% 300%;
+    background: radial-gradient(circle at bottom, navy 0, black 100%);
     animation: gradientAnimation 10s ease infinite;
     color: #ffffff;
     padding: 6rem 2rem 2rem;
@@ -143,7 +115,7 @@ li {
   padding: 13px 30px;
   background-color: none;
   color: #fff;
-  border: 2px solid #000000; /* Transparent border for a shadow effect */
+  border: 2px solid #ffffff; /* Transparent border for a shadow effect */
   border-radius: 25px; /* Fully rounded corners */
   margin-top: 20rem;
   text-decoration: none;
@@ -184,14 +156,13 @@ li {
 
 /* LinkedIn icon hover */
 .social-icons a:nth-child(3):hover {
-    color: #0037ff; /* LinkedIn blue */
+    color: #446ce3; /* LinkedIn blue */
 }
 
 /* Xing icon hover */
 .social-icons a:nth-child(4):hover {
-    color: #007086; /* Xing green */
+    color: #00ffb7; /* Xing green */
 }
-
 
 #dotsCanvas {
   position: absolute;
@@ -207,9 +178,51 @@ li {
   z-index: 1;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .home .pera1 {
+    margin: 0 2rem 3rem;
+  }
+
+  .home .btn {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .home .btn {
+    margin-top: 3rem;
+  }
+  
+  .pera1 {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
 
 /****************************************************************************/
-
 
 /* About Section */
 .about {
@@ -217,14 +230,28 @@ li {
   background-color: #333;
   color: white;
   text-align: center;
-  /* margin-bottom: 0%; */
 }
 
 .profile-img {
   border-radius: 50%;
-  width: 14rem;
-  height: 14.5rem;
+  width: 10rem;
+  height: 10.5rem;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 10px;
+  }
+  
+  .profile-img {
+    width: 8rem;
+    height: 8.5rem;
+  }
+
+  .about .pera-about {
+    margin-bottom: 2rem;
+  }
 }
 
 .about p {
@@ -252,13 +279,6 @@ li {
 }
 
 /* Strengths Section */
-
-.strengths-title {
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 .strengths {
   background-color: #f4f4f4;
   padding: 60px 0px 0px 0px;
@@ -268,9 +288,15 @@ li {
   letter-spacing: 2px;
 }
 
+.strengths-title {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -284,6 +310,16 @@ li {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .strengths {
+    padding: 40px 10px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -294,22 +330,11 @@ li {
   color: #6b5b95; /* Customize icon color */
 }
 
-/* Education Section */
-.education {
-  padding: 70px 20px;
-  margin-bottom: -7%;
-}
-.education-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 /* Experience Section */
 .experience {
-  margin-bottom: -1%;
-  padding: 80px 0px;
+  padding: 70px 20px;
+  margin-top: 5%;
+  margin-bottom: -8%;
 }
 
 .Experience-title {
@@ -319,115 +344,190 @@ li {
   letter-spacing: 2px;
 }
 
-/*************************************************************************/
-
-.divider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+@media (max-width: 768px) {
+  .experience {
+    padding: 50px 10px;
+  }
 }
 
-.diamond {
-  width: 10px;
-  height: 10px;
-  background-color: #6b5b95;
-  transform: rotate(45deg);
-  margin: 0 5px;
+/* Education Section */
+.education {
+  padding: 70px 20px;
 }
 
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.container {
-  padding: 5px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-.container.left {
-  right: 5%;
-}
-
-.container.right {
-  left: 48%;
-}
-
-.content {
-  padding: 10px;
-  background-color: #88888837;
-  position: relative;
-  border-radius: 6px;
-}
-
-.date {
-  background-color: #6b5b95;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 50px;
-  display: inline-block;
+.education-title {
+  text-align: center;
+  font-size: 36px;
   font-weight: bold;
-  font-size: 16px;
+  letter-spacing: 2px;
 }
 
-.job p {
-  padding: 1rem;
-  text-align: justify;
+@media (max-width: 768px) {
+  .education {
+    padding: 50px 10px;
+  }
 }
 
-/* Create the vertical timeline line */
-.timeline::after {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list-2 {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  position: relative;
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  grid-auto-rows: min-content;
+  row-gap: var(--row-gap); /* Ensure vertical space between items */
+}
+
+
+/* Card layout */
+.list-2 li {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  --inlineP: 1.5rem;
+}
+
+/* Date */
+.list-2 li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  position: relative;
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* Date triangle */
+.list-2 li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* Circle connecting date to the timeline line */
+.list-2 li .date::after {
   content: "";
   position: absolute;
-  width: 1px;
-  background-color: #6b5b95;
-  top: 0;
-  bottom: 0%;
-  left: 50%;
-  margin-top: 10px;
-  margin-bottom: 1%;
-}
-
-/* Circle points */
-.container::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
   border-radius: 50%;
-  background-color: #6b5b95;
-  top: 15px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* Title and description */
+.list-2 li .title,
+.list-2 li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.list-2 li .title {
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+.list-2 li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* Shadows for title and description */
+.list-2 .title::before,
+.list-2 .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
   left: 50%;
-  margin-left: -10px;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
 }
 
-/* Left container alignment */
-.container.left::before {
-  left: 662px;
+.list-2 li .title::before {
+  bottom: calc(100% + 0.125rem);
 }
 
-/* Right container alignment */
-.container.right::before {
-  left: calc(100% - 653px);
+.list-2 li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
 }
 
-/* Left-aligned content styling */
-.container.left .content {
-  text-align: right;
-  padding-left: 0;
-  padding-right: 20px;
+/* Responsive Design: Alternate left-right layout on larger screens */
+@media (min-width: 768px) {
+
+      /* Vertical line in the center */
+      .list-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: var(--line-w);
+        height: 100%;
+        background: rgb(225, 225, 225);
+        border-radius: calc(var(--line-w) / 2);
+        transform: translateX(-50%);
+      }
+      
+      .list-2 li {
+        width: calc(50% - var(--col-gap)); /* Ensure each item takes half the width */
+      }
+      
+      .list-2 li:nth-child(odd) {
+        justify-self: start; /* Align odd items to the left */
+      }
+      
+      .list-2 li:nth-child(even) {
+        justify-self: end; /* Align even items to the right */
+      }
+      
+      /* Circle connector for odd items */
+      .list-2 li:nth-child(odd) .date::after {
+        transform: translate(-50%, -50%);
+        left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+      }
+      
+      /* Adjust date triangle for odd items */
+      .list-2 li:nth-child(odd) .date::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        left: 0;
+      }
+      
+      /* Adjust date border-radius for odd items */
+      .list-2 li:nth-child(odd) .date {
+        border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+      }
+
 }
 
-/* Right-aligned content styling */
-.container.right .content {
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 0;
-}
+/****************************************************************************/
 
 /* Footer Section */
 footer {
@@ -435,6 +535,7 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 20px;
+  margin-top: 10%;
 }
 
 footer form {
@@ -459,6 +560,7 @@ footer form button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px 0;
 }
 
 footer .social-icons {
@@ -468,4 +570,10 @@ footer .social-icons {
 footer .social-icons a {
   color: white;
   margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  footer form {
+    width: 90%; /* Adjust for smaller screens */
+  }
 }
