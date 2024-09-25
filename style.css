@@ -374,9 +374,8 @@ li {
 
 @media (max-width: 750px) {
   .strengths {
-    padding: 40px 10px;
+    padding: 50px 10px;
     font-size: 2vm;
-    letter-spacing: 1px;
   }
   
   .skills-grid {
