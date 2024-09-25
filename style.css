@@ -337,7 +337,6 @@ li {
   margin-bottom: -5%;
   text-align: center;
   font-weight: bold;
-  letter-spacing: 2px;
 }
 
 .strengths-title {
@@ -375,11 +374,6 @@ li {
 @media (max-width: 750px) {
   .strengths {
     padding: 50px 10px;
-    font-size: 3vw;
-  }
-
-  .strengths p {
-    font-size: 3vw;
   }
   
   .skills-grid {
