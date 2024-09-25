@@ -66,7 +66,7 @@ nav ul li a:hover::after {
 
 /* Logo aligned to the left */
 nav .logo {
-  order: 0; /* Make sure the logo stays on the left */
+  flex: 1;
 }
 
 .logo a {
@@ -107,8 +107,8 @@ li {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 22px;
+  width: 25px;
+  height: 20px;
   order: 3;
 }
 
@@ -204,12 +204,7 @@ li {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    margin: 0;
-  }
-  
-  nav ul {
+nav ul {
     flex-direction: column;
     align-items: center;
   }
@@ -374,7 +369,6 @@ li {
 @media (max-width: 750px) {
   .strengths {
     padding: 50px 10px;
-    font-size: 1vw;
   }
   
   .skills-grid {
