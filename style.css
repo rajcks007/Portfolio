@@ -495,6 +495,7 @@ nav ul {
   background: var(--bgColor);
   position: relative;
   padding-inline: 1.5rem;
+  text-align: center;
 }
 .list-2 li .title {
   padding-block-start: 1.5rem;
