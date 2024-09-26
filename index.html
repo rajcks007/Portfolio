@@ -6,7 +6,7 @@
     <title>Raj Choksi Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- add icon link -->
+        
 </head>
 
 <body>
@@ -145,11 +145,11 @@
     <footer id="contact" class="contact">
         <h1>Get In Touch</h1>
         <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" onclick="SendMail()" class="btn">Send Message</button>
         </form>
 
         <div class="social-icons">
@@ -160,8 +160,17 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="main.js" id="text/javascript"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+          emailjs.init({
+            publicKey: "D1zxtd7QweVRJ9XSP",
+          });
+        })();
+    </script>
 
 </body>
 

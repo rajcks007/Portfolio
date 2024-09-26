@@ -1,32 +1,3 @@
-// const canvas = document.getElementById('dotsCanvas');
-// const ctx = canvas.getContext('2d');
-
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-
-// function drawDots() {
-//     for (let i = 0; i < 100; i++) {
-//         const x = Math.random() * canvas.width;
-//         const y = Math.random() * canvas.height;
-//         const size = Math.random() * 3;
-//         ctx.beginPath();
-//         ctx.arc(x, y, size, 0, Math.PI * 2);
-//         ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'; // White dots with transparency
-//         ctx.fill();
-//     }
-// }
-
-// drawDots();
-// drawDots();
-// drawDots();
-
-// window.addEventListener('resize', () => {
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-//     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous dots
-//     drawDots(); // Redraw dots
-// });
-
 let canvas = document.getElementById('dotsCanvas');
 const ctx = canvas.getContext('2d');
 const dots = [];
@@ -37,7 +8,7 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('nav'); // Parent container for the menu
 
-  // Toggle the menu when the hamburger is clicked
+ // Toggle the menu when the hamburger is clicked
   hamburger.addEventListener('click', (event) => {
     navLinks.classList.toggle('active');
     event.stopPropagation(); // Stop event from bubbling up
@@ -122,23 +93,13 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 window.addEventListener('mousemove', handleMouseMove);
 
-// Initialize EmailJS with your User ID
-(function() {
-  emailjs.init("D1zxtd7QweVRJ9XSP"); // Replace with your actual User ID
-})();
-
-// Add event listener for the contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  // Send the form data using EmailJS
-  emailjs.sendForm('service_8hzwt8b', 'template_fjovmrd', this)
-      .then(function() {
-          alert('Message sent successfully!'); // Success message
-      }, function(error) {
-          alert('Failed to send message: ' + JSON.stringify(error)); // Error handling
-      });
-});
-
-
-
+// Send the form data using EmailJS
+function SendMail(){
+  let params = {
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value,
+  }
+  email.send("service_8hzwt8b","template_6q52wnt",params).then(alert("Successs!")) 
+}
