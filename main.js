@@ -128,7 +128,7 @@ window.addEventListener('mousemove', handleMouseMove);
 })();
 
 // Add event listener for the contact form submission
-document.getElementById('contact').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
   // Send the form data using EmailJS
