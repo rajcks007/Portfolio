@@ -122,5 +122,23 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 window.addEventListener('mousemove', handleMouseMove);
 
+// Initialize EmailJS with your User ID
+(function() {
+  emailjs.init("D1zxtd7QweVRJ9XSP"); // Replace with your actual User ID
+})();
+
+// Add event listener for the contact form submission
+document.getElementById('contact').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('service_8hzwt8b', 'template_fjovmrd', this)
+      .then(function() {
+          alert('Message sent successfully!'); // Success message
+      }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error)); // Error handling
+      });
+});
+
 
 
