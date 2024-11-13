@@ -93,13 +93,38 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 window.addEventListener('mousemove', handleMouseMove);
 
-// Send the form data using EmailJS
-function SendMail(){
-  let params = {
-    name : document.getElementById("name").value,
-    email : document.getElementById("email").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value,
-  }
-  email.send("service_8hzwt8b","template_6q52wnt",params).then(alert("Successs!")) 
-}
+/****************************************************************************************************/
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+  };
+
+  // Send data to Google Apps Script using fetch
+  fetch('https://script.google.com/macros/s/AKfycbyMDmj9ExNVt_4mfRSVqFRqoEeg68bPpAMSBuf4Nogxi_Qf6B0t4FS3MphJ3tsfU2DKhw/exec', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData) // Convert form data to JSON
+  })
+  .then(response => {
+      if (response.ok) {
+          document.getElementById('responseMessage').innerText = "Message sent successfully!";
+          document.getElementById('contactForm').reset(); // Clear the form
+      } else {
+          document.getElementById('responseMessage').innerText = "There was an error sending your message.";
+      }
+  })
+  .catch(error => {
+      document.getElementById('responseMessage').innerText = "Network error: Could not send your message.";
+      console.error("Error:", error);
+  });
+});
+

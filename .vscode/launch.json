@@ -1,7 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -20,6 +19,12 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "type": "msedge",
+      "name": "http://127.0.0.1:3000/index.html",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000/index.html"
     }
   ]
 }
