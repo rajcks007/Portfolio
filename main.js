@@ -8,11 +8,13 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('nav'); // Parent container for the menu
 
- // Toggle the menu when the hamburger is clicked
+if (hamburger) {
+  // Toggle the menu when the hamburger is clicked
   hamburger.addEventListener('click', (event) => {
     navLinks.classList.toggle('active');
     event.stopPropagation(); // Stop event from bubbling up
   });
+}
 
   // Close the menu if clicking anywhere outside of it
   document.addEventListener('click', (event) => {
